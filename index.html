@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Embeddings</title>
+  <meta name="description" content="">
+  <meta name="author" content="Rob Mealey">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/sky.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+   <section class='' data-state=''>
+    <h1>Embeddings</h1>
+    <h2>the Future of NLP?</h2>
+
+<h3>Rob Mealey</h3>
+
+<h3>Mostly Bad Java, Nowadays</h3>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>So what are we talking about?</h2>
+    
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h5>EMBEDDINGS</h5>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h4>word embeddings...</h4>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>phrase embeddings...</h3>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h2>document embeddings...</h2>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h2>thought embeddings...</h2>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h1>MOAR IMBEDDINGS!</h1>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>Ok but wtf?</h2>
+    
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h2>techniques for learning</h2>
+
+<h2>&quot;distributed representations&quot;</h2>
+
+<h2>of words, phrases, whatever</h2>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h2>representations are</h2>
+
+<h2>vectors of numbers</h2>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <p><img src="assets/img/msoft.jpg" alt="&#39;msoft&#39;"></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h2>GEOMETRIC relationships</h2>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h1>Meaning? Similarity?</h1>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h2>Unsupervised</h2>
+
+<h2>(no labels required)</h2>
+
+<h3>But lots of raw data is required</h3>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>What EMBEDDINGS can do</h2>
+    
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h2>word/phrase/document similarity</h2>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <iframe width=800 height=600 src="http://irsrv2.cs.biu.ac.il:9998/?word=eisenhower"></iframe>
+
+<p><a href="http://irsrv2.cs.biu.ac.il:9998/">Omer Levy Demo</a></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h2>Analogy!</h2>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <p><img src="assets/img/recommender.jpg" alt="&#39;similarity&#39;"></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h1>not enough</h1>
+
+<h1>for you?</h1>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <p><img src="assets/img/city_zip.jpg" height=600/></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <p><img src="assets/img/company_ceo.jpg" height=600/></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <p><img src="assets/img/comparative_superlative.jpg" height=600/></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+</section>
+<section class='' data-state='' id='slide-5'>
+  
+  <p><a href="http://www.ghostweather.com/files/word2vecpride/">Another Cool Demo</a></p>
+
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>What &quot;embeddings&quot; are NOT</h2>
+    
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h1>Deep Learning</h1>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <ul>
+<li>Two most popular implementations:
+
+<ul>
+<li>word2vec, Google 2013 </li>
+<li>GloVe, Stanford 2014)</li>
+</ul></li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>both implementation of word2vec</h3>
+
+<h3>are SHALLOW neural networks.</h3>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>GloVe is a highfalutin</h3>
+
+<h3>log-linear model.</h3>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h2>Google just published successor to word2vec: &quot;Swivel&quot;</h2>
+
+<h3>Feb 6, 2016</h3>
+
+<p><a href="http://arxiv.org/pdf/1602.02215v1.pdf">Swivel Paper</a></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <blockquote>
+<p>Swivel uses stochastic gradient descent to perform a weighted 
+approximate matrix factorization, ultimately arriving at embeddings 
+that reconstruct the point-wise mutual information (PMI) between
+each row and column feature. Swivel uses a piecewise loss function
+to differentiate between observed and unobserved cooccurrences.</p>
+</blockquote>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h1>nary a &quot;neural&quot; to be found</h1>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>deep neural networks,</h3>
+
+<h3>especially in NLP applications,</h3>
+
+<h3>usually have embedding layers.</h3>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>What &quot;embeddings&quot; ARE</h2>
+    
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h1>BIG DATA</h1>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <blockquote>
+<p>Tomas Mikolov even told me that the whole idea behind word2vec was to demonstrate that you can get better word representations if you trade the model&#39;s complexity for efficiency, i.e. the ability to learn from much bigger datasets. 
+<a href=https://www.quora.com/How-does-word2vec-work>Omer Levy on Quora</a></p>
+</blockquote>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <p><img src="assets/img/hype_cycle.jpg" alt="&#39;hype&#39;"></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>A peek under the hood</h2>
+    
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>implicit decomposition</h3>
+
+<h3>of massive context matrix</h3>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <iframe width=1200 height=600 seamless src="https://en.wikipedia.org/wiki/Pointwise_mutual_information"></iframe>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <iframe width=1200 height=600 seamless src="https://en.wikipedia.org/wiki/Pointwise_mutual_information#Applications"></iframe>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>What &quot;embeddings&quot; can do</h2>
+    <h1>FOR US</h1>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h2>automatable</h2>
+
+<h2>customer-specific</h2>
+
+<h2>feature engineering</h2>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h2>similarity querying</h2>
+
+<h2>that gets better</h2>
+
+<h2>the more data we get</h2>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h2>actors, entities, organizations</h2>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <iframe width=800 height=600 src="http://irsrv2.cs.biu.ac.il:9998/?word=madoff"></iframe>
+
+<p><a href="http://irsrv2.cs.biu.ac.il:9998/">Omer Levy Demo</a></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h1>My point:</h1>
+
+<ul>
+<li>our customers pump a lot of unlabeled data through our system</li>
+<li>more than enough to train models for each with &quot;valid&quot; geometries</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h2>all sorts of interesting, unsupervised things.</h2>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <ul>
+<li>paragraph vectors</li>
+<li>document vectors, </li>
+<li>&quot;thought&quot; vectors,</li>
+<li>entity vectors,</li>
+<li>on and on</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>If you want to sit here all afternoon,</h3>
+
+<h3>I&#39;ll happily keep talking.</h3>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+</section>
+<section class='' data-state='' id='slide-10'>
+  
+  <iframe width=800 height=600 src="http://irsrv2.cs.biu.ac.il:9998/?word=stalin"></iframe>
+
+<p><a href="http://irsrv2.cs.biu.ac.il:9998/">Omer Levy Demo</a></p>
+
+</section>
+<section>
+   <section class='' data-state=''>
+    <h1>Further reading and tools</h1>
+    
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>word2vec</h3>
+
+<ul>
+<li><a href="https://code.google.com/archive/p/word2vec/">https://code.google.com/archive/p/word2vec/</a></li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>GloVe</h3>
+
+<ul>
+<li><a href="http://nlp.stanford.edu/projects/glove/">http://nlp.stanford.edu/projects/glove/</a></li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>gensim (Radim Rehurek)</h3>
+
+<ul>
+<li><a href="http://radimrehurek.com/gensim/">http://radimrehurek.com/gensim/</a></li>
+<li><a href="http://rare-technologies.com/word2vec-tutorial/">http://rare-technologies.com/word2vec-tutorial/</a></li>
+<li><a href="http://rare-technologies.com/making-sense-of-word2vec/">http://rare-technologies.com/making-sense-of-word2vec/</a></li>
+<li><a href="http://rare-technologies.com/doc2vec-tutorial/">http://rare-technologies.com/doc2vec-tutorial/</a></li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>Yoav Goldberg and Omer Levy</h3>
+
+<ul>
+<li><a href="https://levyomer.wordpress.com/">https://levyomer.wordpress.com/</a></li>
+<li><a href="http://www.cs.bgu.ac.il/%7Eyoavg/publications/">http://www.cs.bgu.ac.il/~yoavg/publications/</a></li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>interesting applications:</h3>
+
+<ul>
+<li><a href="http://bookworm.benschmidt.org/posts/2015-10-25-Word-Embeddings.html">http://bookworm.benschmidt.org/posts/2015-10-25-Word-Embeddings.html</a></li>
+<li><a href="http://bookworm.benschmidt.org/posts/2015-10-30-rejecting-the-gender-binary.html">http://bookworm.benschmidt.org/posts/2015-10-30-rejecting-the-gender-binary.html</a></li>
+<li><a href="http://instagram-engineering.tumblr.com/post/117889701472/emojineering-part-1-machine-learning-for-emoji">http://instagram-engineering.tumblr.com/post/117889701472/emojineering-part-1-machine-learning-for-emoji</a></li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+</section>
+<section class='' data-state='' id='slide-12'>
+  
+  <p>Questions?</p>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'sky', 
+    transition: Reveal.getQueryHash().transition || 'concave', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
